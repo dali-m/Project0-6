@@ -103,6 +103,15 @@ userEvents: dict ={
     5: exit
 }
 
+#Defining main.
+def main():
+    while True:
+        print_menu()
+        option = input()
+        try:
+            userEvents[int(option)]()
+        except Exception as e:
+            print(f'Invalid option {option}. Please try again.')
 
 if __name__ == '__main__':
     main()
