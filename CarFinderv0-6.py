@@ -80,6 +80,11 @@ def remove_vehicle(vehicle_name):
     else:
         print(f" '{vehicle_name}' not REMOVED as an authorized vehicle.")
 
+#Defining exit option
+def exit():
+    print('Thank you for using the AutoCountry Vehicle Finder, good-bye!')
+    exit(code=0)
+
 
 
 #Second part of the menu 
