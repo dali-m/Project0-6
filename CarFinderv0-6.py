@@ -55,7 +55,7 @@ def print_menu():
 def print_all_vehicles():
     print('Authorized Vehicles:')
     vehicles = read_file()
-    for vehicle in AllowedVehiclesList:
+    for vehicle in vehicles:
         print(vehicle)
     print('*******************************')
 
@@ -63,7 +63,7 @@ def print_all_vehicles():
 def search_vehicle():
     vehicle_name = input('Please Enter the full vehicle name:')
     vehicles = read_file()
-    if vehicle_name in AllowedVehiclesList:
+    if vehicle_name in vehicles:
      print(f"{vehicle_name} is an authorized vehicle")
     else:
         print(f"{vehicle_name} is not an authorized vehicle, if you received this in error please check the spelling and try again")
@@ -73,7 +73,7 @@ def search_vehicle():
 def add_vehicle():
      vehicle_name = input('Please Enter the full vehicle name you would like to add:')
      vehicles = read_file()
-     if vehicle_name not in AllowedVehiclesList:
+     if vehicle_name not in vehicles:
         add_to_file(vehicle_name)
         print(f"You have added {vehicle_name} as an authorized vehicle.")
 
@@ -81,7 +81,7 @@ def add_vehicle():
 def remove_vehicle():
     vehicle_name = input('Please Enter the full Vehicle name you would like to remove:')
     vehicles = read_file()
-    if vehicle_name in AllowedVehiclesList:
+    if vehicle_name in vehicles:
         confirmation = input(f"Are you sure you want to remove '{vehicle_name}' from the Allowed Vehicles List? (yes/no): ")
         if confirmation == 'yes':        
             remove_from_file(vehicle_name)
@@ -94,7 +94,7 @@ def remove_vehicle():
 def print_allowed_vehicles_list():
     print('\nThe AutoCountry sales manager has authorized the purchase and selling of the following vehicles:')
     vehicles = read_file()
-    for vehicles in AllowedVehiclesList:
+    for vehicles in vehicles:
         print(vehicles)
     print('********************************')
 
