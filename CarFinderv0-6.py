@@ -72,7 +72,7 @@ def search_vehicle(vehicle_name):
 #Defining the Add option.
 def add_vehicle(vehicle_name):
      vehicle_name = input('Please Enter the full vehicle name you would like to add:')
-     vehicles = read_file
+     vehicles = read_file()
      if vehicle_name not in AllowedVehiclesList:
         add_to_file(vehicle_name)
         print(f"You have added {vehicle_name} as an authorized vehicle.")
@@ -80,7 +80,7 @@ def add_vehicle(vehicle_name):
 #Defining the DELETE option.
 def remove_vehicle(vehicle_name):
     vehicle_name = input('Please Enter the full Vehicle name you would like to remove:')
-    vehicles = read_file
+    vehicles = read_file()
     if vehicle_name in AllowedVehiclesList:
         confirmation = input(f"Are you sure you want to remove '{vehicle_name}' from the Allowed Vehicles List? (yes/no): ")
         if confirmation == 'yes':        
@@ -93,7 +93,7 @@ def remove_vehicle(vehicle_name):
 #Second part of the menu 
 def print_allowed_vehicles_list():
     print('\nThe AutoCountry sales manager has authorized the purchase and selling of the following vehicles:')
-    vehicles = read_file
+    vehicles = read_file()
     for vehicles in AllowedVehiclesList:
         print(vehicles)
     print('********************************')
