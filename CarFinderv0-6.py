@@ -1,4 +1,5 @@
 import os
+
 #CarFinder
 #This program allows a user to find authorized vehicles sold.
 
@@ -53,12 +54,14 @@ def print_menu():
 #Adding the end part of the menu.
 def print_all_vehicles():
     print('Authorized Vehicles:')
+    vehicles = read_file()
     for vehicle in AllowedVehiclesList:
         print(vehicle)
     print('*******************************')
 
 #Defining search option.
 def search_vehicle(vehicle_name):
+    vehicles = read_file()
     if vehicle_name in AllowedVehiclesList:
      print(f"{vehicle_name} is an authorized vehicle")
     else:
@@ -67,8 +70,9 @@ def search_vehicle(vehicle_name):
 
 #Defining the Add option.
 def add_vehicle(vehicle_name):
+     vehicle_name = input('Please Enter the full vehicle name you would like to add:')
      if vehicle_name not in AllowedVehiclesList:
-        AllowedVehiclesList.append(vehicle_name)
+        add_to_file(vehicle_name)
         print(f"You have added {vehicle_name} as an authorized vehicle.")
 
 #Defining the DELETE option.
