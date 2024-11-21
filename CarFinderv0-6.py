@@ -61,6 +61,7 @@ def print_all_vehicles():
 
 #Defining search option.
 def search_vehicle(vehicle_name):
+    vehicle_name = input('Please Enter the full vehicle name:')
     vehicles = read_file()
     if vehicle_name in AllowedVehiclesList:
      print(f"{vehicle_name} is an authorized vehicle")
@@ -92,6 +93,7 @@ def remove_vehicle(vehicle_name):
 #Second part of the menu 
 def print_allowed_vehicles_list():
     print('\nThe AutoCountry sales manager has authorized the purchase and selling of the following vehicles:')
+    vehicles = read_file
     for vehicles in AllowedVehiclesList:
         print(vehicles)
     print('********************************')
