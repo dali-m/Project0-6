@@ -1,8 +1,9 @@
+import os
 #CarFinder
 #This program allows a user to find authorized vehicles sold.
 
 AllowedVehiclesList = ['Ford F-150' , 'Chevrolet Silverado' , 'Tesla Cybertruck' , 'Toyota Tundra' , 'Nissan Titan' , 'Rivian R1T' , 'Ram 1500']
-import os
+
 file_name="./allowed_database.txt"
 def init_file():
     if not os.path.exists(file_name):
