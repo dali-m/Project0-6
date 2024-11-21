@@ -94,27 +94,15 @@ def print_allowed_vehicles_list():
         print(vehicles)
     print('********************************')
 
-#
-def main():
-    while True:
-        print_menu()
-        option = input()
-        if option == '1':
-            print_allowed_vehicles_list()
-        elif option == '2':
-            vehicle_name = input('Please Enter the full vehicle name:')
-            search_vehicle(vehicle_name)
-        elif option == '3':
-            vehicle_name = input('Please Enter the full Vehicle name you would like to add:')
-            add_vehicle(vehicle_name)
-        elif option == '4':
-            vehicle_name = input('Please Enter the full Vehicle name you would like to remove:')
-            remove_vehicle(vehicle_name)
-        elif option == '5':
-            print('Thank you for using the AutoCountry Vehicle Finder, good-bye!')
-            break
-        else:
-            print('Invalid option. Please try again.')
+#User Events
+userEvents: dict ={
+    1: print_allowed_vehicles_list,
+    2: search_vehicle,
+    3: add_vehicle,
+    4: remove_vehicle,
+    5: exit
+}
+
 
 if __name__ == '__main__':
     main()
