@@ -99,7 +99,7 @@ def print_allowed_vehicles_list():
     print('********************************')
 
 #Defining exit option.
-def exit():
+def leave():
     print('Thank you for using the AutoCountry Vehicle Finder, good-bye!')
     exit(code=0)
 
@@ -109,7 +109,7 @@ userEvents: dict ={
     2: search_vehicle,
     3: add_vehicle,
     4: remove_vehicle,
-    5: exit
+    5: leave
 }
 
 #Defining main.
