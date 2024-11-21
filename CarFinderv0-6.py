@@ -60,7 +60,7 @@ def print_all_vehicles():
     print('*******************************')
 
 #Defining search option.
-def search_vehicle(vehicle_name):
+def search_vehicle():
     vehicle_name = input('Please Enter the full vehicle name:')
     vehicles = read_file()
     if vehicle_name in AllowedVehiclesList:
@@ -70,7 +70,7 @@ def search_vehicle(vehicle_name):
     print('********************************')
 
 #Defining the Add option.
-def add_vehicle(vehicle_name):
+def add_vehicle():
      vehicle_name = input('Please Enter the full vehicle name you would like to add:')
      vehicles = read_file()
      if vehicle_name not in AllowedVehiclesList:
@@ -78,7 +78,7 @@ def add_vehicle(vehicle_name):
         print(f"You have added {vehicle_name} as an authorized vehicle.")
 
 #Defining the DELETE option.
-def remove_vehicle(vehicle_name):
+def remove_vehicle():
     vehicle_name = input('Please Enter the full Vehicle name you would like to remove:')
     vehicles = read_file()
     if vehicle_name in AllowedVehiclesList:
