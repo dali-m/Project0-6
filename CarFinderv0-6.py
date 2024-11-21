@@ -114,6 +114,7 @@ userEvents: dict ={
 
 #Defining main.
 def main():
+    init_file()
     while True:
         print_menu()
         option = input()
